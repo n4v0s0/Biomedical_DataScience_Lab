@@ -172,7 +172,7 @@ study = optuna.create_study(
     direction="maximize",
     sampler=optuna.samplers.TPESampler(),
     pruner = optuna.pruners.MedianPruner(n_startup_trials=0),
-    storage="postgresql+psycopg2://postgres:bargeld2@localhost/optunastudy_ogbproteins",
+    storage="postgresql+psycopg2://postgres:****@localhost/optunastudy_ogbproteins",
     load_if_exists=True
     )
 study.optimize(lambda trial: objective(trial,data),n_trials=30)
